@@ -1,46 +1,88 @@
-title: Link #博客标题
-description: Just 4 Fun. #博客描述
-keywords: blog,css,html,php #博客关键字
-author: "Link"
+#######################
+# Theme Customization #
+#######################
 
-#title hide and show
-hide: (つェ⊂)我藏好啦
-show: ´∇｀ 呀被发现啦~ 
+title: J. Bravo                             # used in <title> tag & site header
+author: Johnny Bravo                        # used in a <meta> tag & /feed.xml
+description: >                              # used in a <meta> tag & /feed.xml
+  Hello 911 emergency, there's a handsome guy in my house!
+  Oh wait a second, cancel that. It's only me.
+slogan: Showtime!                           # used in site header, beside title
+avatar: /i/avatar.png                       # used as portrait in site header
+banner: /i/mountains.svg                    # used as background in site header
+url: http://solana.ryanlue.com              # used by plugins to generate feed.xml and sitemap.xml
+baseurl: ''                                 # prepended to all absolute filepaths
+repo: https://github.com/rlue/jekyll-solana # used in footer
 
-baseurl: "" # change this to the subpath of your site, e.g. /blog. Leave it empty if you don't need it.
-url: "hydrogen.atlinker.cn" # change this to the base hostname & protocol for your site
-buildtime: "1514736000" #博客建立时的时间戳 可进入https://tool.lu/timestamp/将博客建立时的日期转换成时间戳
-           #The timestamp at the time of blog establishment can be entered at https://tool.lu/timestamp/to convert the date at the time of blog establishment into a timestamp.
+# Objects listed here will appear in the main nav menu.
+# Exceeding four items may cause problems on the desktop (>900px wide) layout.
+nav_menu:
+  - name: Posts
+    url: /
+    icon: /i/icons.svg#posts # icons should be 24x24 px.
+  - name: Projects
+    url: /projects
+    icon: /i/icons.svg#portfolio
+  - name: GitHub
+    url: https://github.com/rlue/
+    icon: /i/icons.svg#github
+    outbound: true      # this key sets a link to open in a new window.
+  - name: Contact
+    scheme: mailto      # these keys enable email obfuscation.
+    handle: hello       # you know, to protect you from bots. (handle and domain
+    domain: github.com  # are separated in case bots crawl GitHub repos, too.)
+    icon: /i/icons.svg#email
 
-PJAX: true #启用PJAX，会与评论系统冲突（如不用评论系统建议开启）
+# Objects listed here will appear on the /projects.html page.
+projects:
+  - title: Solana
+    teaser: A responsive blog template written in Sass and vanilla JavaScript.
+    url: https://github.com/rlue/jekyll-solana
+    role: Creator
+    category: Frontend Dev
+  - title: Cortana
+    teaser: A talking robot. Now available on Google Play?
+    url: https://play.google.com/store/apps/details?id=com.microsoft.cortana
+    role: Core Team
+    category: NLP
+  - title: Rihanna
+    teaser: Possibly another robot. Also available on Google Play.
+    url: https://play.google.com/store/music/artist/Rihanna?id=Arcw2m2ih45qntv3fufub25tyhu
+    role: Contributor
+    category: Algorithmic Composition
 
-paginate: 8 #同时显示的最大文章数，超过自动分页
-paginate_path: "page:num"
+#################
+# Site Settings #
+#################
 
-background: https://api.dujin.org/bing/1920.php
-theme_color: 546E7A
+incremental: true
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE
+  - README.md
+  - TODO.md
 
-google_analytics:
-# hydrogen-blog date format
-# refer to http://shopify.github.io/liquid/filters/date/ if you want to customize this
-hydrogen-blog:
-  date_format: "%b %-d, %Y"
+permalink: /:collection/:path
 
-#MathJax switch
-MathJax: false
+collections:
+  category: { output: true }
+  tag:      { output: true }
 
-#install emoji
+defaults:
+  - scope:  { type:   posts    }
+    values: { layout: post     }
+  - scope:  { type:   tag      }
+    values: { layout: listing  }
+  - scope:  { type:   category }
+    values: { layout: listing  }
+
+sass:
+  sass_dir: _assets/css
+
 plugins:
-  - jemoji
+  - jekyll-paginate
+  - jekyll-feed
+  - jekyll-sitemap
 
-# social account
-image:
-twitter:
-  username:
-#  site:
-facebook:
-  #publisher: null
-  #profile_id: null
-  app_id: null
-  #authors: null
-#  admins:
+paginate: 10
