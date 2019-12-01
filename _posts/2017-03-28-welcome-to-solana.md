@@ -1,8 +1,10 @@
 ---
-title: Welcome to Solana
-teaser: These sample posts are provided as a template for creating your own content.
-category: intro
-tags: [markdown, workflow, foss]
+title: Welcome to our home 
+teaser: 这里将记录我们的日常
+ #These sample posts are provided as a template for creating your own content.
+category: SL♥CCX
+tags: [SL♥CCX, SL♥CCX, SL♥CCX]
+#[markdown, workflow, foss]
 reddit_post: 'https://www.reddit.com/r/Jekyll/comments/6258ln/welcome_to_solana/'
 featured_comments:
   - url: 'https://www.reddit.com/r/Jekyll/comments/6258ln/welcome_to_solana/dfkw5k2/'

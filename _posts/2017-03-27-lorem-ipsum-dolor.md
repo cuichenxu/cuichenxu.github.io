@@ -1,8 +1,11 @@
 ---
-title: Lorem Ipsum Dolor
-teaser: Sit amet, consectetur adipiscing elit. Donec ornare hendrerit nulla, at pharetra sapien posuere vitae.
-category: fusce
-tags: [posuere, blandit, cras]
+title: SL♥CCX
+#Lorem Ipsum Dolor
+teaser: 暂时没想好写啥
+#Sit amet, consectetur adipiscing elit. Donec ornare hendrerit nulla, at pharetra sapien posuere vitae.
+category: SL♥CCX
+tags: [SL♥CCX, SL♥CCX, SL♥CCX]
+#[posuere, blandit, cras]
 ---
 
 Mauris ac nunc at nisi congue accumsan
